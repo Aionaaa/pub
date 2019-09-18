@@ -17,6 +17,16 @@ class Customer
     @drunkenness += drink.alcohol_level
   end
 
+  def customer_eats_food(food)
+    @drunkenness -= food.rejuvenation_level
+  end
+
+
+
+
+
+
+
 
 
 end

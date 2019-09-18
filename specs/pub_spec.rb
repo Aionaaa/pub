@@ -3,6 +3,7 @@ require('minitest/rg')
 require_relative('../Pub.rb')
 require_relative('../Customer.rb')
 require_relative('../Drinks.rb')
+require_relative('../Food.rb')
 
 class TestPub < Minitest::Test
   def setup
@@ -12,6 +13,7 @@ class TestPub < Minitest::Test
     @drink2 = Drinks.new("Cocktail", 9, 4)
     @drink3 = Drinks.new("Vodka", 3, 5)
     @pub = Pub.new("Codeclan Arms", 100, [@drink1, @drink2, @drink3])
+
   end
 
   def test_pub_has_name()
