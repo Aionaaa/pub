@@ -6,9 +6,9 @@ require_relative('../Drinks.rb')
 
 class TestCustomer < Minitest::Test
   def setup
-    @customer = Customer.new("Mickey Mouse", 50, 90)
-    @customer2 = Customer.new("Stitch", 100, 5)
-    @drink1 = Drinks.new("Beer", 7)
+    @customer = Customer.new("Mickey Mouse", 50, 90, 0)
+    @customer2 = Customer.new("Stitch", 100, 5, 0)
+    @drink1 = Drinks.new("Beer", 7, 1)
   end
 
   def test_customer_has_wallet()

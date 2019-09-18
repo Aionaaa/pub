@@ -6,11 +6,11 @@ require_relative('../Drinks.rb')
 
 class TestPub < Minitest::Test
   def setup
-    @customer = Customer.new("Mickey Mouse", 50, 90)
-    @customer2 = Customer.new("Stitch", 100, 5)
-    @drink1 = Drinks.new("Beer", 7)
-    @drink2 = Drinks.new("Cocktail", 9)
-    @drink3 = Drinks.new("Vodka", 3)
+    @customer = Customer.new("Mickey Mouse", 50, 90, 0)
+    @customer2 = Customer.new("Stitch", 100, 5, 0)
+    @drink1 = Drinks.new("Beer", 7, 1)
+    @drink2 = Drinks.new("Cocktail", 9, 4)
+    @drink3 = Drinks.new("Vodka", 3, 5)
     @pub = Pub.new("Codeclan Arms", 100, [@drink1, @drink2, @drink3])
   end
 
