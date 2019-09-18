@@ -17,6 +17,11 @@ class Pub
     @till += drink.price
   end
 
+  def customer_check_age(customer)
+    return true if customer.age >= 18
+  return "Get out of my pub!"
+end
+
 
 
 end
