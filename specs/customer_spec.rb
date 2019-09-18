@@ -2,10 +2,12 @@ require('minitest/autorun')
 require('minitest/rg')
 require_relative('../Pub.rb')
 require_relative('../Customer.rb')
+require_relative('../Drinks.rb')
 
 class TestCustomer < Minitest::Test
   def setup
     @customer = Customer.new("Mickey Mouse", 50)
+    @drink1 = Drinks.new("Beer", 7)
   end
 
   def test_customer_has_wallet()
@@ -13,11 +15,13 @@ class TestCustomer < Minitest::Test
   end
 
   def test_customer_has_name()
-    assert_equal("Mickey Mouse", @customer.name)
+    assert_equal("Mickey Mouse", @customer.customer_name)
   end
 
-
-
+  def test_buy_drink()
+    @customer.buy_drink(@drink1)
+    assert_equal(43, @customer.wallet)
+  end
 
 
 end

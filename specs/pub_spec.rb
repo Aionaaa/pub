@@ -30,7 +30,9 @@ class TestPub < Minitest::Test
     assert_equal(107, @pub.till)
   end
 
-
+  def test_sell_drink_customer_buy_drink()
+    
+  end
 
 
 
