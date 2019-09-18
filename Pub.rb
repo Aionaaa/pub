@@ -6,11 +6,17 @@ class Pub
     @name = name
     @till = till
     @drinks = drinks
+
   end
 
   def number_of_drinks()
     return @drinks.length
   end
+
+  def sell_drink(drink)
+    @till += drink.price
+  end
+
 
 
 

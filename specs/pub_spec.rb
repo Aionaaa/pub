@@ -25,5 +25,13 @@ class TestPub < Minitest::Test
     assert_equal(3, @pub.number_of_drinks)
   end
 
+  def test_sell_drink()
+    @pub.sell_drink(@drink1)
+    assert_equal(107, @pub.till)
+  end
+
+
+
+
 
 end
