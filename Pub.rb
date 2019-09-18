@@ -19,8 +19,13 @@ class Pub
 
   def customer_check_age(customer)
     return true if customer.age >= 18
-  return "Get out of my pub!"
-end
+    return "Get out of my pub!"
+  end
+
+  def kick_customer_out(customer)
+    return "Get out, you're drunk!" if customer.drunkenness >14
+  end
+
 
 
 

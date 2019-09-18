@@ -54,7 +54,15 @@ class TestPub < Minitest::Test
     assert_equal("Get out of my pub!", @pub.customer_check_age(@customer2))
   end
 
-
+  def test_kick_customer_out()
+    @customer.buy_drink(@drink3)
+    @customer.get_drunk(@drink3)
+    @customer.buy_drink(@drink3)
+    @customer.get_drunk(@drink3)
+    @customer.buy_drink(@drink3)
+    @customer.get_drunk(@drink3)
+    assert_equal("Get out, you're drunk!", @pub.kick_customer_out(@customer))
+  end
 
 
 
