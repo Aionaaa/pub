@@ -31,7 +31,10 @@ class TestPub < Minitest::Test
   end
 
   def test_sell_drink_customer_buy_drink()
-    
+    @pub.sell_drink(@drink1)
+    @customer.buy_drink(@drink1)
+    assert_equal(107, @pub.till)
+    assert_equal(43, @customer.wallet)
   end
 
 

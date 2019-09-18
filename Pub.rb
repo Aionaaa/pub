@@ -19,7 +19,4 @@ class Pub
 
 
 
-
-
-
 end
